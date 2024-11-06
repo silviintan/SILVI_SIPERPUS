@@ -22,7 +22,6 @@ return new class extends Migration
             $table->unsignedBigInteger('bookshelf_id');
             $table->timestamps();
 
-
             $table->foreign('bookshelf_id')->references('id')->on('bookshelfs')->onUpdate('cascade')->onDelete('cascade');
         });
     }
