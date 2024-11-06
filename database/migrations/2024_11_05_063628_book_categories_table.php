@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        schema:: craete('loan_details',function(Blueprint $table){
-            $table->id();
-            $table->unsignedBigInteger('book_id');
-            $table->unsignedBigInteger('categories_id');
+        // schema:: create('loan_details',function(Blueprint $table){
+        //     $table->id();
+        //     $table->unsignedBigInteger('book_id');
+        //     $table->unsignedBigInteger('categories_id');
 
-            $table->foreign('book_id')->references('id')->on('books')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('categories_id')->references('id')->on('books')->onUpdate('cascade')->onDelete('cascade');
-        });
+        //     $table->foreign('book_id')->references('id')->on('books')->onUpdate('cascade')->onDelete('cascade');
+        //     $table->foreign('categories_id')->references('id')->on('books')->onUpdate('cascade')->onDelete('cascade');
+        // });
     }
 
     /**

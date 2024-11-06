@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        schema:: craete('loan_details',function(Blueprint $table){
+        schema::create('loan_details',function(Blueprint $table){
             $table->id();
             $table->unsignedBigInteger('loan_id');
             $table->unsignedBigInteger('book_id');
             $table->boolean('is_return');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            // $table->timestamp('created_at');
+            // $table->timestamp('updated_at');
 
             $table->foreign('loan_id')->references('id')->on('loans')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('book_id')->references('id')->on('books')->onUpdate('cascade')->onDelete('cascade');
